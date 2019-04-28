@@ -1,0 +1,25 @@
+<!--pages/reachStore/reachStore.wxml-->
+<view class="container reachStore_page">
+	<view class="header">
+		<image src='http://i1.bvimg.com/684726/5e8bea89bb1d8dcd.jpg' mode="widthFix"></image>
+	</view>
+	<view class="store_list">
+		<view wx:for="{{storeList}}" wx:key="index" bindtap="goLocation" data-i="{{index}}">
+			<view class="store_img">
+				<image src="{{item.store_thumb}}" mode="widthFix"></image>
+			</view>
+			<view class="store_info">
+				<view class="store_name">
+					{{item.store_name}} (营业时间：{{item.store_businessHours}})
+				</view>
+				<view class="store_address">
+					<view class="address_desc">{{item.store_address}}</view>
+					<view class="address_distance">{{store_distance}}{{item.location.distance}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="footer">
+		<image src="http://i2.bvimg.com/684726/915a0cbab1194abf.jpg" mode="widthFix"></image>
+	</view>
+</view>

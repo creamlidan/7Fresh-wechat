@@ -1,0 +1,63 @@
+/* pages/reachStore/reachStore.wxss */
+
+.reachStore_page .header image{
+	width:750rpx;
+}
+.store_list{
+	background:#fff;
+	padding:40rpx 0 0;
+	overflow:hidden;
+}
+.store_list >view{
+	border-radius:12rpx;
+	box-shadow:0 5px 15px rgba(0,0,0,.1);
+	overflow:hidden;
+	width:694rpx;
+	margin:0 auto 40rpx;
+}
+.store_img{
+	width:694rpx;
+	height:299rpx;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.store_img image{
+	width:100%;
+}
+.store_info{
+	padding:20rpx;
+	box-sizing:border-box;
+}
+.store_name{
+	line-height:42rpx;
+	color:#333;
+	font-size:24rpx;
+	font-weight:bold;
+}
+.store_address{
+	display:flex;
+	font-size:22rpx;
+}
+.store_address .address_desc{
+	color:#999;
+	line-height:34rpx;
+	flex:1;
+}
+.store_address .address_distance{
+	color:#6C7AA0;
+	margin-left:70rpx;
+	font-weight:bold;
+}
+
+.footer{
+	height:120rpx;
+	background:white;
+	display:flex;
+	align-items:flex-start;
+	justify-content:center;
+}
+.footer image{
+	width:164rpx;
+}
+

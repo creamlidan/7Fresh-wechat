@@ -1,0 +1,207 @@
+/**app.wxss**/
+page{
+  height:100%;
+  background:#eeeeee;
+}
+.container {
+  height: 100%;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;*/
+  box-sizing: border-box;
+}
+.tit_hidden{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+image{
+  height:auto;
+  display:block;
+}
+
+.section_page {
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.top_fixed {
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  display: block;
+  z-index: 8;
+  box-shadow:0 1px 5px rgba(0,0,0,.05);
+}
+
+.scroll_wrap {
+  display: block;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.bottom_fixed {
+  left: 0px;
+  bottom:0;
+  width: 100%;
+  display: block;
+  z-index:8;
+}
+
+/*徽章*/
+.badge {
+  font-size:12px;
+  line-height:20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  background: rgba(236, 0, 8, 1);
+  left: 50%;
+  top: 2px;
+  font-family: PingFang-SC-Regular;
+  transform:scale(0.8);
+  -webkit-transform:scale(0.8);
+}
+.badge text{
+  line-height:20px;
+}
+.badge.plural{
+  padding: 0px 6px;
+  width: auto;
+  height: 20px;
+}
+.C_yellowFFB63C{
+  background:#FFB63C;
+}
+.C_greenFFB63C{
+  background:#8BD622;
+}
+.C_redFFB63C{
+  background:#F9243C;
+}
+.C_blueFFB63C{
+  background:#2C9FF8;
+}
+.C_lakeBlueFFB63C{
+  background:#1DBFAF;
+}
+.C_66{
+  color:#666666;
+}
+.C_f95{
+  color:#ff9500;
+}
+button{
+  background:transparent;
+  border-radius:0;
+}
+button:after{
+  border:none;
+}
+
+
+/*复选框*/
+.checkbox_group{
+  width:88rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:20rpx;
+}
+.checkbox-core{
+  display:inline-block;
+  backgroud-color:#fff;
+  border-radius:100%;
+  border:1px solid #ccc;
+  width:20px;
+  height:20px;
+  vertical-align:middle;
+  position:relative;
+  box-sizing:border-box;
+}
+.checkbox-core.current{
+  border-color:#ff9500;
+  background-color:#ff9500;
+}
+.checkbox-core::after{
+  border:2px solid rgba(204, 39, 39, 0);
+  border-left: none;
+  border-top:0;
+  content:"";
+  top:3px;
+  left:6px;
+  position:absolute;
+  width:4px;
+  height:8px;
+  -webkit-transform: rotate(45deg) scale(0);
+  transform: rotate(45deg) scale(0);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+.checkbox-core.current::after{
+  border-color:#fff;
+  transform:rotate(45deg) scale(1);
+  -webkit-transform:rotate(45deg) scale(1);
+}
+
+.yellow_btn{
+  line-height: 98rpx;
+  background: #FF9500;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  font-size: 28rpx;
+}
+.yellow_btn.n_click{
+  background: rgba(255,149, 1, 0.5);
+}
+.goods_status{
+  font-size:20rpx;
+  position: absolute;
+  z-index: 997;
+  color:rgba(255,255,255,.8);
+  background: rgba(0,0,0,.35);
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 1.4em;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.f95_btn_b{
+  padding: 14rpx 28rpx;
+  border: 1px solid #FF9500;
+  color: #FF9500;
+  border-radius: 6rpx;
+}
+.f95_btn{
+  padding: 14rpx 28rpx;
+  background: #FF9500;
+  color: #fff;
+  border-radius: 6rpx;
+  border: 1px solid #FF9500;
+}

@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/reachStore/reachStore",
+    "pages/reachHome/reachHome",
+    "pages/todayEat/todayEat",
+    "pages/classify/classify",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#80838B",
+    "selectedColor": "#5D6C95",
+    "list": [
+      {
+        "pagePath": "pages/reachStore/reachStore",
+        "text": "到店",
+        "iconPath": "static/iconfont/store.png",
+        "selectedIconPath": "static/iconfont/store_active.png"
+      },
+      {
+        "pagePath": "pages/reachHome/reachHome",
+        "text": "送到家",
+        "iconPath": "static/iconfont/home.png",
+        "selectedIconPath": "static/iconfont/home_active.png"
+      },
+      {
+        "pagePath": "pages/todayEat/todayEat",
+        "text": "今天吃啥",
+        "iconPath": "static/iconfont/eat.png",
+        "selectedIconPath": "static/iconfont/eat_active.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "static/iconfont/classify.png",
+        "selectedIconPath": "static/iconfont/classify_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "static/iconfont/me.png",
+        "selectedIconPath": "static/iconfont/me_active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}
