@@ -1,2 +1,88 @@
 <!--pages/reachHome/reachHome.wxml-->
-<text>pages/reachHome/reachHome.wxml</text>
+<view class="reachHome_page">
+	<!--头部定位搜索-->
+	<view class="header">
+		<view class="header_fixed">
+			<view class="coordinate">
+				<image src="../../static/iconfont/coordinate_icon.png" mode="widthFix"></image>
+			</view>
+			<navigator url="/pages/search/search" class="search" hover-class="none">
+				<text>沙拉</text>
+				<image src="../../static/iconfont/search_icon.png" mode="widthFix"></image>
+			</navigator>
+			<view class="richScan">
+				<image src="../../static/iconfont/richScan_icon.png" mode="widthFix"></image>
+			</view>
+			<view class="qr">
+				<image src="../../static/iconfont/qr_icon.png" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+	<!--banner ad-->
+	<view class="banner_section">
+		<banner 
+		    imageArr="{{imageArr}}" 
+		    bannerH="250"
+		    autoplay="true"
+		    circular="true"
+		    my-class="radius">
+		</banner>
+	</view>
+	<!--分类导航-->
+	<view class="classify_section core">
+		<view wx:for="{{init.classify}}" wx:key="index">
+			<image src="{{item.img_src}}" mode="widthFix"></image>
+			<text>{{item.classify_name}}</text>
+		</view>
+	</view>
+	<!--活动促销-->
+	<view class="activity_wrap core">
+		<view class="seckill">
+			<view class="activity_t">
+				<view>今日秒杀</view>
+				<view class="time">
+					<text wx:for="{{init.seckill.djs}}" class="{{item !=':'?'time_item':''}}" wx:key="index">{{item}}</text>
+				</view>
+			</view>
+			<view class="desc">{{init.seckill.desc}}</view>
+			<view class="activity_b">
+				<view wx:for="{{init.seckill.goods}}" wx:key="index">
+					<view class="good_img">
+						<image src="{{item.goods_thumb}}" mode="widthFix"></image>
+						<view class="good_discount">
+							<text>{{item.discount}}折</text>
+						</view>
+					</view>
+					<view class="progress">
+						<view style="width:{{item.progress}}%"></view>
+					</view>
+					<view class="good_price">
+						<text>¥{{item.goods_price}}</text>
+						<text>/{{item.goods_unit}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="groupBuy">
+			<view class="activity_t">
+				<view>拼团</view>
+			</view>
+			<view class="desc">{{init.groupBuy.desc}}</view>
+			<view class="activity_b">
+				<view wx:for="{{init.groupBuy.goods}}" wx:key="index">
+					<view class="good_img">
+						<image src="{{item.goods_thumb}}" mode="widthFix"></image>
+					</view>
+					<view class="progress"></view>
+					<view class="good_price">
+						<text>¥{{item.goods_price}}</text>
+						<text>/{{item.goods_unit}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view>
+		<image src="https://graph.baidu.com/resource/1018b563c3d57790e19ea01556612865.jpg" style="width:100%" mode="widthFix"></image>
+	</view>
+</view>

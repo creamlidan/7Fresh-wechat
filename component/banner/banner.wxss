@@ -1,0 +1,14 @@
+/* component/banner/banner.wxss */
+.swiper_container,.banner_wrap navigator image{
+	width:100%;
+}
+.swiper_container .swiper_box{
+	height:100%;
+	width:100%;
+}
+swiper-item navigator{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	overflow:hidden;
+}

@@ -1,7 +1,7 @@
 <!--pages/reachStore/reachStore.wxml-->
 <view class="container reachStore_page">
 	<view class="header">
-		<image src='http://i1.bvimg.com/684726/5e8bea89bb1d8dcd.jpg' mode="widthFix"></image>
+		<image src='https://graph.baidu.com/resource/10297623d8b15cee4ce9a01556608057.jpg' mode="widthFix"></image>
 	</view>
 	<view class="store_list">
 		<view wx:for="{{storeList}}" wx:key="index" bindtap="goLocation" data-i="{{index}}">
@@ -20,6 +20,6 @@
 		</view>
 	</view>
 	<view class="footer">
-		<image src="http://i2.bvimg.com/684726/915a0cbab1194abf.jpg" mode="widthFix"></image>
+		<image src="https://graph.baidu.com/resource/102173fc4583579c201a101556608090.jpg" mode="widthFix"></image>
 	</view>
 </view>

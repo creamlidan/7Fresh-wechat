@@ -1,0 +1,21 @@
+<!--component/banner/banner.wxml-->
+<view class="swiper_container banner_wrap" style="height:{{bannerH}}rpx">
+	<swiper class="swiper_box" 
+	  indicator-dots="{{indicatorDots}}"
+	  indicator-active-color="{{indicatorDots_activeColor}}"
+	  indicator-color="{{indicator_color}}"
+	  autoplay="{{autoplay}}"
+	  interval="{{interval}}"
+	  duration="{{duration}}"
+	  circular="{{circular}}"
+	>
+		<block wx:for="{{imageArr}}" wx:key="index">
+			<swiper-item>
+				<navigator url="{{item.img_url}}" hover-class="none">
+					<image src="{{item.img_src}}" class="slide-image my-class" width="100%" mode="widthFix"/>
+				</navigator>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+

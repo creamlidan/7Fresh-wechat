@@ -1,7 +1,7 @@
 const CONFIG = require('./config.js')
 const API_BASE_URL = 'http://localhost:8088'
 const app = getApp();
-const request = (url, needSubDomain, method, data) => {
+const request = (url, needSubDomain, method, data,$dataName) => {
   let _url = API_BASE_URL + (needSubDomain ? '/' + CONFIG.subDomain : '') + url;
   if(method == 'get'){
     wx.showLoading({
@@ -20,7 +20,15 @@ const request = (url, needSubDomain, method, data) => {
         resolve(res.data)
       },
       fail(error) {
-        reject(error)
+        if($dataName){
+          var jsonData = require(`../server/data/${$dataName}.js`);
+          if(jsonData){
+            wx.hideLoading();
+            resolve(jsonData.dataList)
+          }
+        }else{
+          reject(error)
+        }
       },
       complete(aaa) {
         // 加载完成
@@ -55,6 +63,9 @@ Promise.prototype.finally = function (callback) {
 module.exports = {
   request,
   getStore:() => {
-    return request('/reachStore', true, 'get',{})
+    return request('/reachStore', true, 'get',{},'reachStore')
+  },
+  getHome:() => {
+    return request('/reachHome', true, 'get',{},'reachHome')
   }
 }

@@ -41,6 +41,6 @@ const calculateDistance = function($to,callback){
           console.error(error);
         }
     });
-}
+} 
 
 export {analysisAddress}

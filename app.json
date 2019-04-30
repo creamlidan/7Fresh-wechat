@@ -4,7 +4,8 @@
     "pages/reachHome/reachHome",
     "pages/todayEat/todayEat",
     "pages/classify/classify",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
