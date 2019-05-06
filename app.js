@@ -25,6 +25,20 @@ App({
         }
       }
     })
+
+    let _this_ = this;
+    wx.getLocation({
+      type: 'wgs84',
+      success(res) {
+        const latitude = res.latitude
+        const longitude = res.longitude
+        _this_.globalData.location = {
+          latitude:latitude,
+          longitude:longitude
+        };
+      }
+    })
+
   },
 
   /*
@@ -98,10 +112,10 @@ App({
   },
   //获取设备信息
   getSystemInfo: function () {
-    let t = this;
+    let _this_ = this;
     wx.getSystemInfo({
       success: function (res) {
-        t.globalData.systemInfo = res;
+        _this_.globalData.systemInfo = res;
       }
     });
   },

@@ -66,6 +66,8 @@ module.exports = {
     return request('/reachStore', true, 'get',{},'reachStore')
   },
   getHome:() => {
-    return request('/reachHome', true, 'get',{},'reachHome')
+    return request('/reachHome', true, 'get',{
+      lacation:app.globalData.location
+    },'reachHome')
   }
 }

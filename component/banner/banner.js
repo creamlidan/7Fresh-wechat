@@ -7,7 +7,8 @@ Component({
     imageArr: Array,
     bannerH:Number,
     autoplay:String,
-    circular:String
+    circular:String,
+    nextMargin:String
   },
   externalClasses: ['my-class'],
   /**

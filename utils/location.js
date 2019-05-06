@@ -9,22 +9,22 @@ var qqmapsdk = new QQMapWX({
 */
 
 const analysisAddress = function(value,callback){
-    let _this = this;
-    qqmapsdk.geocoder({
-      address: value, 
-      success: function(res) {
-      	var locationStr = String(res.result.location.lat) +','+String(res.result.location.lng),
-      		locationObj = res.result.location;
-      	calculateDistance(locationStr,function($d){
-      		var d = parseFloat($d/1000).toFixed(1)+'Km';
-      		locationObj.distance = d;
-      		callback && callback(res.result.location)
-      	});
-      },
-      fail: function(error) {
-        console.error(error);
-      }
-    })
+  let _this = this;
+  qqmapsdk.geocoder({
+    address: value, 
+    success: function(res) {
+    	var locationStr = String(res.result.location.lat) +','+String(res.result.location.lng),
+    		locationObj = res.result.location;
+    	calculateDistance(locationStr,function($d){
+    		var d = parseFloat($d/1000).toFixed(1)+'Km';
+    		locationObj.distance = d;
+    		callback && callback(res.result.location)
+    	});
+    },
+    fail: function(error) {
+      console.error(error);
+    }
+  })
 }
 
 /*

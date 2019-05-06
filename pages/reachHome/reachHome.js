@@ -30,7 +30,9 @@ Page({
         let $data  = res.data
         _this_.setData({
           imageArr: $data.banner,
-          init: res.data
+          freshChain:$data.freshChain,
+          init: res.data,
+          recommend:$data.recommend
         });
         wx.setNavigationBarTitle({
           title: res.data.title?res.data.title:'送到家'

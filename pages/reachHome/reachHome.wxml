@@ -49,8 +49,10 @@
 				<view wx:for="{{init.seckill.goods}}" wx:key="index">
 					<view class="good_img">
 						<image src="{{item.goods_thumb}}" mode="widthFix"></image>
-						<view class="good_discount">
-							<text>{{item.discount}}折</text>
+						<view class="good_discountWrap">
+							<view class="good_discount">
+								<text>{{item.discount}}折</text>
+							</view>
 						</view>
 					</view>
 					<view class="progress">
@@ -84,5 +86,72 @@
 	</view>
 	<view>
 		<image src="https://graph.baidu.com/resource/1018b563c3d57790e19ea01556612865.jpg" style="width:100%" mode="widthFix"></image>
+	</view>
+	<view class="freshChain_section">
+		<banner 
+		    imageArr="{{freshChain}}" 
+		    bannerH="296"
+		    autoplay="true"
+		    circular="true"
+		    my-class="freshChain"
+		    nextMargin="27px">
+		</banner>
+	</view>
+	<view>
+		<image src="https://graph.baidu.com/resource/1011b1aab06ff9b7a9ae701557124996.jpg" style="width:100%;height:705rpx;" mode="widthFix"></image>
+	</view>
+	<view class="handpick_section" wx:for="{{init.handpick}}" wx:key="index">
+		<view class="handpick_wrap">
+			<navigator url="{{item.title_url}}" class="handpick_title" hover-class="none">
+				<image src="{{item.title_img}}" mode="widthFix"></image>
+			</navigator>
+		</view>
+		<scroll-view scroll-x class="goods_list">
+			<view wx:for="{{item.goods}}" wx:key="indexV" wx:for-item="itemV" wx:for-index="indexV" class="goods_item">
+				<view class="good_img">
+					<image src="{{itemV.good_thumb}}" mode="widthFix"></image>
+					<view class="good_discountWrap" wx:if="{{itemV.promotion_label.length>0}}">
+						<view class="good_discount" wx:for="{{itemV.promotion_label}}" wx:for-item="itemP" wx:for-index="indexP" wx:key="indexP">
+							<text>{{itemP}}</text>
+						</view>
+					</view>
+				</view>
+				<view class="good_name tit_hidden">{{itemV.good_name}}</view>
+				<view class="goods_itemB">
+					<view class="good_price">
+						<text>¥{{itemV.good_price}}</text>
+						<text>/{{itemV.good_unit}}</text>
+					</view>
+					<view class="add_shopCar">
+						<image src="https://graph.baidu.com/resource/101bfcad1f9354e3042eb01557129989.jpg" mode="widthFix"></image>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view>
+		<image src="https://graph.baidu.com/resource/1011de7dad1ba657820d901557130834.jpg" mode="widthFix" style="width:100%"></image>
+	</view>
+	<view class="recommend_section">
+		<view wx:for="{{recommend}}" wx:key="index">
+			<view class="good_img">
+				<image src="{{item.good_thumb}}" mode="widthFix"></image>
+				<view class="good_discountWrap" wx:if="{{item.promotion_label.length>0}}">
+					<view class="good_discount" wx:for="{{item.promotion_label}}" wx:for-item="itemP" wx:for-index="indexP" wx:key="indexP">
+						<text>{{itemP}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="good_name tit_hidden">{{item.good_name}}</view>
+			<view class="goods_itemB">
+				<view class="good_price">
+					<text>¥{{item.good_price}}</text>
+					<text>/{{item.good_unit}}</text>
+				</view>
+				<view class="add_shopCar">
+					<image src="https://graph.baidu.com/resource/101bfcad1f9354e3042eb01557129989.jpg" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
 	</view>
 </view>
