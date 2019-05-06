@@ -69,5 +69,8 @@ module.exports = {
     return request('/reachHome', true, 'get',{
       lacation:app.globalData.location
     },'reachHome')
+  },
+  getHome_recommendMore:() => {
+    return request('/recommendMore',true,'get',{})
   }
 }

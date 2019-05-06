@@ -71,6 +71,27 @@ Page({
     })
   },
 
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    let _this_ = this;
+    WXAPI.getHome_recommendMore().then(function(res) {
+      if (res.code == 200) {
+        let $recommend = _this_.data.recommend.concat(res.data.recommend)
+        _this_.setData({
+          recommend:$recommend
+        });
+      } else {
+        wx.showToast({
+          title: "网络出现异常,加载失败",
+          icon: 'none'
+        })
+      }
+    })
+  },
+
   /**
    * 用户点击右上角分享
    */
