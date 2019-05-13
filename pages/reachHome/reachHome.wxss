@@ -51,6 +51,30 @@
 }
 .coordinate{
 	margin-right:18rpx;
+	position:relative;
+}
+.nearestShop::before{
+	content:"";
+	width:0rpx;
+	height:0rpx;
+    border:10rpx solid transparent;
+    border-bottom-color:rgba(0,0,0,.5);
+	position: absolute;
+	top:-18rpx;
+	left: 22rpx;
+	color: black;
+}
+.coordinate .nearestShop{
+	position:absolute;
+	font-size:24rpx;
+	padding:6rpx 20rpx;
+	background:rgba(0,0,0,.5);
+	white-space:nowrap;
+	bottom:-50rpx;
+	left:0;
+	color:#fff;
+	border-radius:12rpx;
+	transition:all .3s ease-out;
 }
 .richScan{
 	margin-left:32rpx;
@@ -151,29 +175,7 @@
 	align-items:center;
 	justify-content:center;
 }
-.good_discountWrap{
-	position:absolute;
-	left:0;
-	top:-2rpx;
-	display:flex;
-}
-.good_discount{
-	width:56rpx;
-	height:30rpx;
-	background:#F77379;
-	border-top-right-radius:16rpx;
-	border-bottom-left-radius:16rpx;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	margin-right:6rpx;
-}
-.good_discount text{
-	color:#fff;
-	font-size:22rpx;
-	transform:scale(0.8);
-	-webkit-transform:scale(0.8);
-}
+
 .activity_t >view{
 	color:#DE6A64;
 	font-size:34rpx;

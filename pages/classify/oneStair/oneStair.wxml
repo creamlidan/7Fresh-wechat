@@ -1,0 +1,17 @@
+<!--pages/classify/oneStair/oneStair.wxml-->
+<view class="classify_page">
+	<view class="search">
+		<navigator url="/pages/search/search" hover-class="none">
+			<text>搜索7FRESH美食</text>
+			<image src="../../../static/iconfont/search_icon.png" mode="widthFix"></image>
+		</navigator>
+	</view>
+	<view class="classify_container">
+		<navigator url="/pages/classify/twoStair/twoStair?id={{item.id}}" hover-class="none" wx:for="{{classify}}" wx:key="index">
+			<view class="classify_image">
+				<image src="{{item.classify_image}}" mode="widthFix"></image>
+			</view>
+			<text>{{item.classify_name}}</text>
+		</navigator>
+	</view>
+</view>

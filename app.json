@@ -3,9 +3,11 @@
     "pages/reachStore/reachStore",
     "pages/reachHome/reachHome",
     "pages/todayEat/todayEat",
-    "pages/classify/classify",
+    "pages/classify/oneStair/oneStair",
+    "pages/classify/twoStair/twoStair",
     "pages/me/me",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/goodsInfo/goodsInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,7 +39,7 @@
         "selectedIconPath": "static/iconfont/eat_active.png"
       },
       {
-        "pagePath": "pages/classify/classify",
+        "pagePath": "pages/classify/oneStair/oneStair",
         "text": "分类",
         "iconPath": "static/iconfont/classify.png",
         "selectedIconPath": "static/iconfont/classify_active.png"

@@ -88,3 +88,34 @@ image{
   transform:rotate(45deg) scale(1);
   -webkit-transform:rotate(45deg) scale(1);
 }
+/****促销标签----start****/
+.good_discountWrap{
+  position:absolute;
+  left:0;
+  top:-2rpx;
+  display:flex;
+}
+.good_discount{
+  width:56rpx;
+  height:30rpx;
+  background:#F77379;
+  border-top-right-radius:16rpx;
+  border-bottom-left-radius:16rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:6rpx;
+}
+.good_discount text{
+  color:#fff;
+  font-size:22rpx;
+  transform:scale(0.8);
+  -webkit-transform:scale(0.8);
+}
+/****促销标签----end****/
+
+.dFx{
+  display:flex;
+  align:center;
+  justify-content:center;
+}

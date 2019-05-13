@@ -1,4 +1,4 @@
-// pages/classify/classify.js
+// pages/goodsInfo/goodsInfo.js
 Page({
 
   /**

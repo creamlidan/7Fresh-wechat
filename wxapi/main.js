@@ -70,7 +70,22 @@ module.exports = {
       lacation:app.globalData.location
     },'reachHome')
   },
-  getHome_recommendMore:() => {
-    return request('/recommendMore',true,'get',{})
+  getHome_recommendMore:(page) => {
+    return request('/recommendMore',true,'get',{
+      page:page
+    })
+  },
+  getclassify_oneStair:() => {
+    return request('/classify_oneStair',true,'get',{},'classify_oneStair')
+  },
+  getclassify_twoStair:(id) => {
+    return request('/classify_twoStair',true,'get',{
+      id:id
+    },'classify_twoStair')
+  },
+  getclassify_twoStair_goods:(id) => {
+    return request('/classify_twoStair/goods',true,'get',{
+      id:id
+    },'classify_twoStairGoods')
   }
 }

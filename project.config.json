@@ -37,12 +37,27 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "home",
 					"pathName": "pages/reachHome/reachHome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/classify/oneStair/oneStair",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/classify/twoStair/twoStair",
+					"query": "id=2",
 					"scene": null
 				}
 			]

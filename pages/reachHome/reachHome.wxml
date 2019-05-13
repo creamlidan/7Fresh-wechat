@@ -5,6 +5,7 @@
 		<view class="header_fixed">
 			<view class="coordinate">
 				<image src="../../static/iconfont/coordinate_icon.png" mode="widthFix"></image>
+				<view class="nearestShop" wx:if="{{init && init.nearestShop}}">{{init.nearestShop}}</view>
 			</view>
 			<navigator url="/pages/search/search" class="search" hover-class="none">
 				<text>沙拉</text>

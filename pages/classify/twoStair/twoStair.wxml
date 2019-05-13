@@ -1,0 +1,51 @@
+<!--pages/classify/twoStair/twoStair.wxml-->
+<view class="twoStair_page">
+	<scroll-view class="nav_classify" scroll-y>
+		<view wx:for="{{twoStairClassify}}" 
+			wx:key="index"
+			data-id="{{item.id}}"
+			class="{{currentId == item.id ? 'current':''}}"
+			bindtap="changePage"
+			wx:if="{{item.is_show}}">
+			{{item.name}}
+		</view>
+	</scroll-view>
+	<scroll-view class="classify_goodsList" 
+		scroll-y
+		scroll-into-view="{{toView}}">
+		<view class="category_banner" id="category">
+			<navigator url="{{cat.url}}">
+				<image src="{{cat.img}}" mode="widthFix"></image>
+			</navigator>
+		</view>
+		<view class="classifyGoods_container">
+			<view wx:for="{{classifyGoods}}" wx:key="index" class="goods_item" bindtap="tapGoods" data-i="{{item.id}}">
+				<view class="goods_image dFx">
+					<image src="{{item.good_thumb}}" mode="widthFix"></image>
+					<view class="good_discountWrap" wx:if="{{item.promotion_label.length>0}}">
+						<view class="good_discount" wx:for="{{item.promotion_label}}" wx:for-item="itemP" wx:for-index="indexP" wx:key="indexP">
+							<text>{{itemP}}</text>
+						</view>
+					</view>
+				</view>
+				<view class="goods_info">
+					<view class="goods_name">
+                		<view>{{item.good_name}}</view>
+              		</view>
+					<view class="goods_other">
+						<view class="original_price">¥{{item.original_price}}</view>
+						<view class="goods_price">
+							<text>¥{{item.good_price}}</text><text>/{{item.good_unit}}</text>
+						</view>
+					</view>
+					<view class="add_shopCar" catchtap="addShopcar" data-i="{{item.id}}">
+						<image src="https://graph.baidu.com/resource/101855cca7c14f512a0f101557475051.jpg" mode="widthFix"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="loadingMore" wx:if="{{classifyGoods}}">
+ 			<view>到末尾拉^_^</view>
+ 		</view>
+	</scroll-view>
+</view>

@@ -9,7 +9,8 @@ Page({
    */
   data: {
     init:'',
-    timer:null
+    timer:null,
+    page:1
   },
 
   /**
@@ -77,11 +78,13 @@ Page({
    */
   onReachBottom: function () {
     let _this_ = this;
-    WXAPI.getHome_recommendMore().then(function(res) {
+    WXAPI.getHome_recommendMore(this.data.page).then(function(res) {
       if (res.code == 200) {
         let $recommend = _this_.data.recommend.concat(res.data.recommend)
+        let $page = _this_.data.page + 1;
         _this_.setData({
-          recommend:$recommend
+          recommend:$recommend,
+          page:$page
         });
       } else {
         wx.showToast({
