@@ -92,8 +92,9 @@ Page({
   * 点击进入商品详情
   */
   tapGoods:function($event){
+    console.log
     wx.navigateTo({
-      url:'/pages/goodsInfo/goodsInfo?id'+$event.currentTarget.dataset.id
+      url:'/pages/goodsInfo/goodsInfo?id='+$event.currentTarget.dataset.i
     })
   },
 

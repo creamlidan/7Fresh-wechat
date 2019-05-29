@@ -1,2 +1,57 @@
 <!--pages/goodsInfo/goodsInfo.wxml-->
-<text>pages/goodsInfo/goodsInfo.wxml</text>
+<view class="goodsInfo_page">
+	<!--窗口图-->
+	<view class="banner_section">
+		<banner 
+		    imageArr="{{imageArr}}" 
+		    bannerH="750"
+		    autoplay="true"
+		    circular="false"
+		    indicatorDots="f"
+		    bind:getCurrentIndex="getCIndex">
+		</banner>
+		<view class="banner_indicatorDots">
+			<text>{{currentIndex+1}} / {{imageArr.length}}</text>
+		</view>
+	</view>
+	<!--商品基本信息-->
+	<view class="goods_baseInfo">
+		<view class="good_name">{{base_info.good_name}}</view>
+		<view class="good_desc">{{base_info.good_desc}}</view>
+		<view class="original_price" wx:if="{{base_info.is_currentPromotion == 1}}">
+			<text>¥{{base_info.original_price}}</text>
+		</view>
+		<view class="good_price">
+			<text>¥{{base_info.good_price}}</text>
+			<text>/{{base_info.good_unit}}</text>
+		</view>
+	</view>
+	<!--默认送货地址-->
+	<view class="default_address_wrap dFx">
+		<view>送至</view>
+		<view class="default_address">
+			<view>
+				{{default_address.province}}
+				{{default_address.city}}
+				{{default_address.district}}
+				{{default_address.address}}
+			</view>
+			<view>
+				今天{{init.order_time}}之前下单,最快{{init.delivery_time}}送达
+			</view>
+		</view>
+		<view class="default_address_more">
+			<image src="../../static/iconfont/more.png" mode="widthFix"></image>
+		</view>
+	</view>
+	<!--商品评价-->
+	<view class="evaluate_wrap">
+		<view>商品评价</view>
+		<view class="evaluate_list">
+			<block wx:for="{{evaluate}}" wx:key="index">
+				<evaluate toEvaluate="{{item}}"></evaluate>
+			</block>
+		</view>
+		<navigator url="/pages/search/search" class="dFx">查看全部评价</navigator>
+	</view>
+</view>

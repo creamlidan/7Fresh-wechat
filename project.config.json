@@ -54,9 +54,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "分类",
-					"pathName": "pages/classify/twoStair/twoStair",
+					"pathName": "pages/goodsInfo/goodsInfo",
 					"query": "id=2",
 					"scene": null
 				}

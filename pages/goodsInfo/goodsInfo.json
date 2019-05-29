@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+  	"banner": "../../component/banner/banner",
+  	"evaluate":"../../component/evaluate/evaluate"
+  }
 }

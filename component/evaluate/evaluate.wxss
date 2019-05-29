@@ -1,0 +1,38 @@
+/* component/evaluate.wxss */
+.evaluate_item{
+	border-top:1px solid #eee;
+	padding:24rpx 0;
+}
+.evaluate_user{
+	margin-bottom:20rpx;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+.evaluate_user .user_image{
+	width:48rpx;
+	height:48rpx;
+	margin-right:20rpx;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.evaluate_user .user_image image{
+	width:100%;
+}
+.evaluate_user .user_name{
+	font-size:22rpx;
+	color:#666;
+}
+.evaluate_desc{
+	color:#666;
+	font-size:22rpx;
+	overflow: hidden;
+    line-height: 34rpx;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    height: 68rpx;
+    min-height: 68rpx;
+} 

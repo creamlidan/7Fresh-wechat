@@ -8,14 +8,14 @@ Component({
     bannerH:Number,
     autoplay:String,
     circular:String,
-    nextMargin:String
+    nextMargin:String,
+    indicatorDots:String
   },
   externalClasses: ['my-class'],
   /**
    * 组件的初始数据
    */
   data: {
-    indicatorDots:true,
     interval:3000,
     duration:500,
     indicatorDots_activeColor:"#FFFFFF",
@@ -26,6 +26,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    getCurrentIndex:function($event){
+      this.triggerEvent('getCurrentIndex',{'currentIndex':$event.detail.current});
+    }
   }
 })

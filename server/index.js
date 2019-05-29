@@ -200,7 +200,7 @@ app.get("/api/classify_twoStair",function(req,res){
     writeFile('classify_twoStair',data);
     res.end(JSON.stringify(data));
 })
-app.get("/api/classify_twoStair/goods",function(req,res){
+app.get("/api/classify_twoStair_goods",function(req,res){
     var data = Mock.mock({
         'info':'返回成功',
         'data':{
@@ -223,6 +223,51 @@ app.get("/api/classify_twoStair/goods",function(req,res){
                     'https://graph.baidu.com/resource/1025149a9e6c264b35c3701556607360.jpg',
                     'https://graph.baidu.com/resource/102d0e5e45a1f4c6e02c201556607521.jpg']
             }
+        },
+        code:200
+    })
+    writeFile('classify_twoStairGoods',data);
+    res.end(JSON.stringify(data));
+})
+//商品详情
+app.get("/api/goods_info",function(req,res){
+    var data = Mock.mock({
+        'info':'返回成功',
+        'data':{
+            'goods_bannerImage':[{
+                'img_src':'https://graph.baidu.com/resource/101e5aa927aa89dea277701559112484.jpg',
+                'img_url':'##'
+            },{
+                'img_src':'https://graph.baidu.com/resource/1019af50c5dc5a04cfa4701559112531.jpg',
+                'img_url':'##'
+            },{
+                'img_src':'https://graph.baidu.com/resource/101d831accd1d9e29cca301559112545.jpg',
+                'img_url':'##'
+            }],
+            base_info:{
+                'good_name':Mock.mock('@cword("水果蔬菜肉蛋奶禽榴莲特别好吃", 20)'),
+                'good_desc':'清香爽滑的甜美滋味,多等一秒都是可惜',
+                'good_price|1-50':1,
+                'original_price|50-100':1,
+                'good_unit|1':['盒','瓶','份'],
+                'good_id|+1':1,
+                'promotion_label|1':[['满减','直降'],['满减','限时'],['限时'],[],[]],
+                'is_currentPromotion|1':[0,1]
+            },
+            default_address:{
+                address:'测试',
+                city:'北京',
+                district:'东城区',
+                province:'北京',
+                address_id:1
+            },
+            delivery_time:'15:00-15:45',
+            order_time:'14:41',
+            'evaluate|2':[{
+                user_img:'https://graph.baidu.com/resource/1024248d5d2ac483768d901556607990.jpg',
+                user_name:Mock.mock('@cword("writeFile占个安居客干", 5)'),
+                'desc|1':Mock.mock('@csentence(40,70)')
+            }]
         },
         code:200
     })

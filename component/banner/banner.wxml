@@ -1,7 +1,7 @@
 <!--component/banner/banner.wxml-->
 <view class="swiper_container banner_wrap" style="height:{{bannerH}}rpx">
 	<swiper class="swiper_box" 
-	  indicator-dots="{{indicatorDots}}"
+	  indicator-dots="{{indicatorDots == 'f' ? false:true}}"
 	  indicator-active-color="{{indicatorDots_activeColor}}"
 	  indicator-color="{{indicator_color}}"
 	  autoplay="{{autoplay}}"
@@ -9,6 +9,7 @@
 	  duration="{{duration}}"
 	  circular="{{circular}}"
 	  next-margin="{{nextMargin}}"
+	  bindchange="getCurrentIndex"
 	>
 		<block wx:for="{{imageArr}}" wx:key="index">
 			<swiper-item class="my-class">

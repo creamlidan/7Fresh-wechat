@@ -84,8 +84,14 @@ module.exports = {
     },'classify_twoStair')
   },
   getclassify_twoStair_goods:(id) => {
-    return request('/classify_twoStair/goods',true,'get',{
+    return request('/classify_twoStair_goods',true,'get',{
       id:id
     },'classify_twoStairGoods')
+  },
+  //商品详情
+  getGoodsInfo:(id) => {
+    return request('/goods_info',true,'get',{
+      id:id
+    },'goodsInfo')
   }
 }

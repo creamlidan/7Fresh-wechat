@@ -1,0 +1,12 @@
+<!--component/evaluate.wxml-->
+<view class="evaluate_item">
+	<view class="evaluate_user">
+		<view class="user_image">
+			<image src="{{toEvaluate.user_img}}" mode="widthFix"></image>
+		</view>
+		<view class="user_name">
+			{{toEvaluate.user_name}}
+		</view>
+	</view>
+	<view class="evaluate_desc">{{toEvaluate.desc}}</view>
+</view>
